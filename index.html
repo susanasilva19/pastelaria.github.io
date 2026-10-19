@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Café Aroma — café de qualidade, bolos artesanais e momentos especiais.">
+    <title>Café Aroma | Um lugar especial</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #faf6ef;
+            color: #3e2723;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #3e2723;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #d7a86e;
+        }
+
+        .hero {
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+            color: white;
+            background:
+                linear-gradient(rgba(35, 20, 14, 0.55),
+                                rgba(35, 20, 14, 0.65)),
+                url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1600&q=80")
+                center/cover;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 6vw, 62px);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            margin-bottom: 30px;
+        }
+
+        .botao {
+            display: inline-block;
+            background-color: #b87942;
+            color: white;
+            padding: 13px 28px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .botao:hover {
+            background-color: #8d552d;
+        }
+
+        section {
+            padding: 65px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .descricao {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .menu {
+            background-color: #efe3d2;
+        }
+
+        .produtos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .produto {
+            background-color: #fffdf9;
+            padding: 28px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(62, 39, 35, 0.08);
+        }
+
+        .produto .icone {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .produto h3 {
+            margin-bottom: 8px;
+        }
+
+        .preco {
+            display: block;
+            margin-top: 12px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #9b622f;
+        }
+
+        .horarios {
+            background-color: #fffdf9;
+        }
+
+        .horarios p {
+            margin: 8px 0;
+        }
+
+        .contactos {
+            background-color: #e8d5bf;
+        }
+
+        .contactos p {
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #3e2723;
+            color: white;
+            text-align: center;
+            padding: 22px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            nav a {
+                margin-left: 0;
+            }
+
+            .hero {
+                min-height: 400px;
+            }
+
+            section {
+                padding: 45px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">☕ Café Aroma</div>
+
+        <nav aria-label="Menu principal">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre nós</a>
+            <a href="#menu">Menu</a>
+            <a href="#horarios">Horários</a>
+            <a href="#contactos">Contactos</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div>
+                <h1>O sabor dos bons momentos</h1>
+                <p>Café acabado de preparar, bolos deliciosos e um ambiente acolhedor.</p>
+                <a href="#menu" class="botao">Descobrir o nosso menu</a>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <h2>Bem-vindo ao Café Aroma</h2>
+            <div class="descricao">
+                <p>
+                    Somos um café onde cada chávena conta uma história.
+                    Preparamos café com dedicação, servimos produtos frescos
+                    e criamos o ambiente ideal para conversar, trabalhar
+                    ou simplesmente relaxar.
+                </p>
+                <p>
+                    Mais do que um café, somos um lugar para partilhar
+                    bons momentos.
+                </p>
+            </div>
+        </section>
+
+        <section class="menu" id="menu">
+            <h2>O nosso menu</h2>
+            <p>Pequenos prazeres para tornar o teu dia melhor.</p>
+
+            <div class="produtos">
+                <article class="produto">
+                    <div class="icone">☕</div>
+                    <h3>Expresso</h3>
+                    <p>Café intenso, aromático e acabado de tirar.</p>
+                    <span class="preco">1,00 €</span>
+                </article>
+
+                <article class="produto">
+                    <div class="icone">🥛</div>
+                    <h3>Galão</h3>
+                    <p>Café suave com leite cremoso.</p>
+                    <span class="preco">1,80 €</span>
+                </article>
+
+                <article class="produto">
+                    <div class="icone">🥐</div>
+                    <h3>Croissant</h3>
+                    <p>Folhado delicioso para acompanhar o café.</p>
+                    <span class="preco">1,50 €</span>
+                </article>
+
+                <article class="produto">
+                    <div class="icone">🍰</div>
+                    <h3>Bolo caseiro</h3>
+                    <p>Uma fatia doce, preparada com carinho.</p>
+                    <span class="preco">2,50 €</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="horarios" id="horarios">
+            <h2>Horário de funcionamento</h2>
+            <p><strong>Segunda a sexta:</strong> 07:30 – 19:00</p>
+            <p><strong>Sábado:</strong> 08:00 – 18:00</p>
+            <p><strong>Domingo:</strong> 09:00 – 13:00</p>
+            <p><em>Horários meramente ilustrativos.</em></p>
+        </section>
+
+        <section class="contactos" id="contactos">
+            <h2>Visita-nos</h2>
+            <p>📍 Morada: Rua Principal, Lisboa, Portugal</p>
+            <p>📞 Telefone: 210 000 000</p>
+            <p>✉️ Email: geral@cafearoma.pt</p>
+            <br>
+            <a class="botao" href="mailto:geral@cafearoma.pt">
+                Enviar email
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Café Aroma. Todos os direitos reservados.</p>
+        <p>Feito com ☕ e carinho.</p>
+    </footer>
+
+</body>
+</html>
